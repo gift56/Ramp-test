@@ -12,10 +12,10 @@ export function InputSelect<TItem>({
   isLoading,
   loadingLabel,
 }: InputSelectProps<TItem>) {
-  const [selectedValue, setSelectedValue] = useState<TItem | null>(defaultValue ?? items[0] ?? null)
+  const [selectedValue, setSelectedValue] = useState<TItem | any>(defaultValue ?? null)
 
   const onChange = useCallback<InputSelectOnChange<TItem>>(
-    (selectedItem) => {
+    (selectedItem: any) => {
       if (selectedItem === null) {
         return
       }
