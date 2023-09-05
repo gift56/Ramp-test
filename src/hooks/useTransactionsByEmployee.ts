@@ -9,6 +9,8 @@ export function useTransactionsByEmployee(): TransactionsByEmployeeResult {
 
   const fetchById = useCallback(
     async (employeeId: string) => {
+      if (employeeId === "") return null
+      
       const data = await fetchWithCache<Transaction[], RequestByEmployeeParams>(
         "transactionsByEmployee",
         {
