@@ -74,7 +74,7 @@ export function App() {
         <div className="RampGrid">
           <Transactions transactions={transactions} />
 
-          {/* {transactions !== null && (
+          {transactions !== null && transactions?.length === 5 && (
             <button
               className="RampButton"
               disabled={paginatedTransactionsUtils.loading}
@@ -84,7 +84,7 @@ export function App() {
             >
               View More
             </button>
-          )} */}
+          )}
         </div>
       </main>
     </Fragment>
