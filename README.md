@@ -1,5 +1,6 @@
-# Instructions
+### Challenge completed
 
+# Instructions
 
 Welcome to Ramp's frontend interview challenge.
 
